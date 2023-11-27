@@ -45,7 +45,12 @@
             <a class="btn btn-danger" href="logout.php">Sair</a>
         </div>
     </nav>
-
+    <footer class="bg-dark py-4 mt-0">
+        <div class="container text-light text-center">
+        <?php if(session_id() == '' || !isset($_SESSION)){session_start();} ?>
+        <?php echo '<h4>Olá ' .$_SESSION['nome'] .'! Seja bem-vindo(a)</h4>'; ?></p>
+        </div>
+      </footer>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
       </ol>
@@ -60,13 +65,13 @@
         <img class="d-block w-100" src="banner4.jpg" alt="Third slide">
       </div>
     </div>
-
+      
       <footer class="bg-dark py-5 mt-0">
         <div class="container text-light text-center">
-          <p class="display-5 mb-3">Sistema de Gerenciamento de Projetos Sociais</p>
+          <p>&copy; Copyright by SGPS.</p>
         </div>
       </footer>
-      <p>&copy; Copyright by SGPS.</p>
+      
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
